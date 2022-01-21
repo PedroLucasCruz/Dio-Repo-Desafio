@@ -1,0 +1,55 @@
+Git Conflitos 
+
+
+1 - Quando ocorrer o conflito de codigo na branch corrente utilize git pull para puxar as alteraçõe
+
+2 - O git vai alterar dentro do arquivo, separando por
+
+
+
+# Livros de receitas :man_cook:
+
+Olá! Bem vindo ao meu livro de receitas? :wave:
+
+- Strogonoff de frango 
+
+<<<<<<< HEAD  (anotação: o que está abaixo do HEAD escrito com -YYY é o código adicionado 
+
+- YYY
+
+  =======
+
+- Outro Pavê (anotação: o que está logo abaixo do escrito aqui como outro Pavê é o código que veio do gitHub e já existia
+
+>>>>>>> b39af12bf9a0ea59281622781971b932240fd7d5
+
+
+
+
+
+3 - Você substituiu a linha colocando as alterações significativas e salva o arquivo, ou pode alterar o arquivo colocando ambas as linhas: 
+
+4 - É importante apagar o código adicionado pelo git como no exemplo abaixo: 
+
+
+
+# Livros de receitas :man_cook:
+
+Olá! Bem vindo ao meu livro de receitas? :wave:
+
+- Strogonoff de frango 
+
+- YYY
+
+- Outro Pavê
+
+
+
+5 - Depois salva e fecha o arquivo e manda um git status para saber como está, se aparecer: both modified, então quer dizer que o conflito foi resolvido, mas não enviado ainda. 
+
+6 - Apos resolver o conflito adicione com git add * 
+
+7 - Adicione o commit apos adicionar em stage com: git commit -m "Alteração do git"
+
+8 - Execute git push para enviar a resolução de conflito
+ 

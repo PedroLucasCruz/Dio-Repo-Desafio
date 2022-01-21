@@ -1,0 +1,18 @@
+git Init - git add - git commit
+
+1 - Para iniciar repositórios: git init 
+2 - Mover arquivos para o repositório: git add
+3 - Para criar o commit: git commit
+
+>> Criando um repositório
+
+1 - Para Limpar código digitados no GitBash: cltr+L
+2 - Para ver pastas ocultas no GITBASH: ls -a 
+3 - Atrelar um autor aos commits: git config --global user.email "email aqui"
+
+>> Criando um arquivo markdow ou arquivo qualquer para subit no Dit
+
+1 - Adicionar conteudo ao repositório: git add *
+2 - Enviar arquivos com o commit: git commit -m "commit inicial" 
+
+

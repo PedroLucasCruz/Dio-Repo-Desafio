@@ -1,0 +1,64 @@
+>>>> Configuração de da Chave SSH do Git Cli para o GitHub <<<<
+
+OBS: essas configurações se aplicam a repositório privados. 
+
+Gerar chave no SSH para colocar no GIT, utilize o GITBASH 
+
+1 - Abra o GitBASH 
+2 - Digit os comandos a seguir no console do GitBASH 
+3 - ssh-keygen -t ed25519 -C emailAqui
+
+3.1 
+ssh-keygen= gera chave
+ed25519= o tipo de criptografia da chave 
+
+4 - Depois entre dentro da pasta com os comando cd /c/Users/Pedro/.ssh
+5 - Use o comando ls para listar os arquivos dentro da pasta ou vá manualmente até o caminho da pasta  C:\Users\pedro\.ssh
+6 - comando cat para ver o conteudo: cat id_ed25519.pub : ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG61t5rOgFWwY7HRPCOlkltVC9KXivZOrl2gYwF/jC1t emailAqui
+
+
+A chave SSH no gitHub deve ser configurada seguindo as opções 
+
+1 - Entrar na sua conta GitHub 
+2 - Acessar Settings no menu superior direito ao clica no ponteiro colado a foto 
+3 - Menu lateral esquerdo procure a opção SSH and GPG Keys 
+4 - Selecione Add new ssh 
+5 - coloque a chave no campo grande e dê um titulo a ela por exemplo "Minha chave windows"
+
+Novamente no CLI(dentro do prompt do GitBash)
+
+1 - Entre na pasta do que está as chaves com: cd C:\Users\pedro\.ssh 
+2 - Inicializar o sh agent com: eval $(ssh-agent -s)
+3 - Agora o SSh agent está rodando em segundo plano se mostrar agent pid <numero do pid>
+4 - Passar a chave privada privada com: ssh-add id_ed25519
+5 - Vai pedir o passwrod que você digitou na criação da chave 
+6 - Emite uma mensagem dizendo: Identity added: id_ed25519 (emailaAqui)
+
+Testando Clone de projeto por SSH em repositórios privados. 
+
+1 - Crie um repositório privado 
+2 - Vá até o seu repositório privado criado 
+3 - Pega sua chave ssh criada 
+4 - Cria uma pasta onde será clonado o projeto usado:  mkdir workspace
+5 - Entre dentro da pasta com: cd workspace
+6 - Clone o repositorio privado criado com: git clone <sua chave de git clone aqui>
+7 - Ao exibir a mensagem Are you sure you want to continue connecting (yes/no/[fingerprint])? digite Yes e de enter, ele vai adicionar o github ao seus hosts conhecidos. 
+8 - Se pedir o password digite
+
+-----------------------------------------------------------------------------------------------
+
+Configuração De Token de acesso no GitHub
+
+1 - Canto esquerda acesso a opção > Developer settings > Personal acesso tokens > Generate new token 
+2 - É possivel configurar uma data de Expiração para o token em Expiraion 
+3 - Escreva um nome para o Token 
+4 - Selecione a opção repo, para atribuir as opções padrões do git como git status, deployment status, public repositories, repository invitations, read and write security events
+5 - Clique em Generate token no final da página   
+6 - Salve o Token antes de sair e tenha certeza que salvou a informação, pois, para pegar o token terá que ser gerado um novo
+7 - Vá até seu repositório privado e clone com o link do https, pois, por causa do token isso é possivel, dando acesso para qualquer máquina. 
+8 - Será aberto uma pequena tela do GitHub pedindo autenticação do Toke, seleciona a pequena aba de Toke dentro da Janel e cole o seu Token de Autenticação feito na pagina do GITHUB. 
+9 - Clique em Sign in 
+10 - Ele vai baixar todas as informações do repositório. 
+
+
+

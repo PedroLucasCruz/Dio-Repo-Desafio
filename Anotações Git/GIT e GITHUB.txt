@@ -1,0 +1,59 @@
+GIT E GITHUB
+
+OBS: Silence for sucess (se não mostrar nada na tela é por que deu certo)
+
+- Comandos básico de navegação no terminal
+
+- mudar de pastas 
+- Listar as pastas 
+-Criar pastas/arquivos 
+-Deletar pastas/arquivos 
+
+Windows: 
+
+- cd (mudar de pasta)
+- dir (listar pastas)
+- mkdir 
+- del/rmdir
+- cls (clear scream/ limpar tela)
+- Usar TAB para auto completar a pasta
+- echo (print qualquer mensagem digitada na tela)
+- sinal > no cmd é um output, ou seja, ele pega o que foi digitado com echo e joga dentro do aquivo que você define Ex: echo hello > hello.txt 
+- del (deleta apenas arquivos e não pastas)
+Unix 
+- rmdir workspace /s /q (remove pasta com arquivos) 
+
+- cd
+- Is
+- mkdir
+- rm -rf
+
+Instalação GIT.
+
+para windows no site oficial: https://git-scm.com/
+Durante a instalação verificar se as opções GIT Bash here e Git Gui Gere estão selecionadas 
+
+1 - Chossing the defoult editor used by git, neste momento você seleciona o editor padrão  
+2 - Adjusting the name of the initial branch in new repositories, você pode dar o nome de main ao repositorio inicial padrão ou deixar o git decidir com a opção Let git decide. 
+3 - Configuring the line ending conversions, deixar selecionar o tipo de caracter que o o git vai interpretar, deixar selecionado a opção Checkout Windows-style, commit Unix-style line endings 
+4 - Choose a credential helper, deixar selecionado a opção de Git Credentual Manager Core selecionado 
+5 - next next next 
+
+Funcionamento do Git 
+
+- SHA1 - Secure Hahs Algorithm 
+Algoritmo de Hash Seguro, é um conjuntod e funções hash criptográficas projetadas pela NSA (Agência de Segurança Nacional dos EUA)
+A encriptação gera conjunto de characteres identificador de 40 dígitos, se você pega um arquivo de texto e coloca o hahs para rodar em cima ele gera um hash unico em cima disso, se você pegar o mesmo arquivo e trocar uma virgula ele gera outro hash em cima disso, mas se voltar a virgula ele gera o mesmo hash anterior. 
+
+- Objetos fundamentais
+Três objetos do Git resposanvel pelo versionamento do código:  Blobs, Trees, Commits 
+Blos: Armazena meta dados 
+Trees: contém também meta dados e aponta para um blob e guarda o nome do arquivo 
+Commit aponta para a Arvore(Trees) parente, autor, mensagem"commit inicial" e tem um timestamp um carimbo de tempo. 
+ 
+- Sistema distribuiído 
+Código no servidor é o código final, esse 
+
+- Segurança 
+Git e GirHub são seguros devido a configuração de criptografia por ash Sha1, os Blobs são criptografados e pertencentes as Trees, as Trees são Criptografadas e por suas vez pertecents ao Commits que também são criptgrafados. 
+

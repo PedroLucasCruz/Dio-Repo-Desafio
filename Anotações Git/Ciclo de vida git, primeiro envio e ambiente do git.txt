@@ -1,0 +1,59 @@
+Ciclo de Vida dos arquivos no Git
+
+Abrir manual da branch do git: git branch --help
+
+>> Branch 
+
+Mandar branch nova com as novas alterações: git push --set-upstream origin NovaBranch
+
+>> Estados do Git 
+
+>> git init cria um repositório de código 
+
+1 - Tracked - São arquivos rastreados que já são pertecentes ao git
+unmodified - Ainda não modificado
+Modified- Sofreu modificação
+Staged - Quando mudar para Staged, significa que você colocou em um grupo isolado para um pré agrupamento em outra branch
+
+Obs: Os arquivos modified trocam de unmodified para Modified quando são modificados, o git sabe quando os arquivos são modificados comparado o hahs dos arquivos encriptados por Sha1.
+
+Obs: Quando o arquivo está com status modified e fazemos um git add novamente nele, ele é movido para Staged
+
+Obs: Quando removemos os arquivos com status Unmodified eles passam a ser Untracked, ou seja, não rastreados pelo git.
+
+2 - Untracked - São arquivo ainda não rastreado, ainda não pertecentes do git.
+
+3 - O git sempre faz este clico durante o processo de commit, move o arquivo de unmodified para modified e de modified para stage e e no processo final ele captura o atual status do arquivo e salva junto com o commit para oficializar o envio dos dados e os arquivo voltam para Unmodified. 
+
+>>> Ambiente de desenvolvimento 
+
+Wokking Directory -> Staging Area -> Local Repository 
+
+1 - git status - Para ver o status dos arquivos e branch atual: 
+
+nothing to commit = Nada para commitar 
+Working tree clean =  A Arvore de trabalho está limpa
+
+2 - mv strogonoff.md ./receitas/ - Mover arquivos de dentro de uma pasta para dentro de outras pasta
+
+3 - git add * pega todo arquivo na situação trabalhada ou adicionado e move para stage para ser commitado. 
+
+4 - git add nomeArquivo move um arquivo especifico para stage para preparar para um commit 
+
+5 - git add. utitlizando o ponto também pegamos todos os arquivos para mover para stage, sejam eles não rastreados ou arquivos modificados. 
+
+6 - git commit -m "msg escrita aqui para o commit"
+
+7 - git config --list para listar todas as configurações do seu git 
+
+8 - git config --global --unset user.email retirar dados do email das configurações do git 
+9 - git config --global --unset user.name  retirar dados de nome das configurações do git 
+
+10 - git config --global user.email "email aqui" adiciona novas configurações do git de email 
+11 - git config --global user.name "nome do git aqui" adiciona nova configuações do git de nome de usuário
+
+>> Primeiro envio ao github após criar o repositório no site
+
+1 - git remote add origin https://github.com/PedroLucasCruz/livro-receitas.git
+2 - git remote -v lista os repositórios remotos cadastrados 
+3 - git push origin master 
